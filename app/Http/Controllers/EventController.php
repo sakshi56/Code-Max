@@ -9,7 +9,7 @@ class EventController extends Controller
     public function getEvent()
     {
         //EventData
-        $eventName = DB::select('evt_name','name' );
+        $eventName = DB::select('select evt_name');
         $organizerName = DB::table('startups')->select('name')->get()->where('org_startup_id', '');
         $part_Name = DB::table('startups')->select('name')->get()->where('prt_strtup_id', '');
 
