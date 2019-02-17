@@ -37,7 +37,6 @@
                                                     <th>Progress Status</th>
                                                     <th>Start date</th>
                                                     <th>Last Update</th>
-                                                    <th>Change Progress</th>
                                                 </tr>
                                             </thead>
                                             <tfoot>
@@ -48,7 +47,6 @@
                                                         <th>Progress Status</th>
                                                         <th>Start date</th>
                                                         <th>Last Update</th>
-                                                        <th>Change Progress</th>
                                                 </tr>
                                             </tfoot>
                                 <tbody>
