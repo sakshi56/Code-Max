@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\DB;
 class DashoardController extends Controller
 {
     
-    //
+   
     public function index(){
         if(Session::get('username')!='')
             {
