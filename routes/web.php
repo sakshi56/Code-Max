@@ -30,6 +30,7 @@ Route::group(['middlewareGroups' => 'web', 'middleware' => 'revalidate'], functi
 
 
     Route::post('req_mentor','MentorController@req_mentor');
+    Route::get('add_mentor','MentorController@add_mentor');
     
     
     Route::get('strt_report','StartupController@strt_report');
@@ -40,4 +41,5 @@ Route::group(['middlewareGroups' => 'web', 'middleware' => 'revalidate'], functi
     Route::get('new_visitor','VisitorController@new_visitor_index');
     Route::post('new_visitor/submit','VisitorController@addVisitor');
     
+    Route::get('visitor','EventController@showVisitor');
 });

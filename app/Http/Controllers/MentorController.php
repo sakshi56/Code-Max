@@ -25,6 +25,20 @@ class MentorController extends Controller
                 return redirect('/')->with('status',"Please login First");
             }
     }
+    public function add_mentor_index(){
+        if(Session::get('username')!='')
+            {
+                // Log::info(session('username'). " View Dashboard page");
+                // $data=DB::table('mem_cat')->get();
+               
+                return view('add_mentor');
+            }
+        else
+            {
+                Log::error('User name not found');
+                return redirect('/')->with('status',"Please login First");
+            }
+    }
     public function mem_cat(Request $request){
        
              //   Log::info(session('username'). " Ajax member call");

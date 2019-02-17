@@ -20,24 +20,49 @@
                 <div class="card">
                     <div class="header">
                         <div class='row'>
+                                @if (Session::get('strt_up_id')<1)
+                                <div class="col-sm-4">
+                                        <h2>
+                                            Mentors
+                                        </h2>
+                                    </div>
+                                <div class="col-sm-4">
+                                        <div class="form-inline" style="    text-align: center;">
+                                                <label>Select Category</label>
+                                                <br>
+                                                &nbsp;
+                                                <select class="form-control show-tick" name="set_cat" id="set_cat">
+                                                    <option>Select Categroy</option>
+                                                    @foreach ($data as $item)
+                                                    <option value="{{$item->id}}">{{$item->mem_cat_name}}</option>
+                                                    @endforeach
+                                                </select>
+                                            </div>
+                                    </div>
+                                    <div  class="col-sm-4">
+                                        <a href="add_mentor"><button style="float:right" class="btn btn-primary">
+                                            Add New Mentor</button></a>
+                                    </div>
+                            @else
                             <div class="col-sm-6">
-                                <h2>
-                                    Mentors
-                                </h2>
-                            </div>
-                            <div class="col-sm-6">
-                                <div class="form-inline" style="    text-align: right;">
-                                    <label>Select Category</label>
-
-                                    &nbsp;
-                                    <select class="form-control show-tick" name="set_cat" id="set_cat">
-                                        <option>Select Categroy</option>
-                                        @foreach ($data as $item)
-                                        <option value="{{$item->id}}">{{$item->mem_cat_name}}</option>
-                                        @endforeach
-                                    </select>
+                                    <h2>
+                                        Mentors
+                                    </h2>
                                 </div>
-                            </div>
+                                <div class="col-sm-6">
+                                    <div class="form-inline" style="    text-align: right;">
+                                        <label>Select Category</label>
+    
+                                        &nbsp;
+                                        <select class="form-control show-tick" name="set_cat" id="set_cat">
+                                            <option>Select Categroy</option>
+                                            @foreach ($data as $item)
+                                            <option value="{{$item->id}}">{{$item->mem_cat_name}}</option>
+                                            @endforeach
+                                        </select>
+                                    </div>
+                                </div>
+                            @endif
                         </div>
 
 
