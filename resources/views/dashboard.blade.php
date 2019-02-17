@@ -328,27 +328,28 @@
                             <ul class="dashboard-stat-list">
                                 <li>
                                     TODAY
-                                    <span class="pull-right"><b>12</b> <small>TICKETS</small></span>
+                                <span class="pull-right"><b>{{$day_task}}</b> <small>TASKS</small></span>
                                 </li>
                                 <li>
                                     YESTERDAY
-                                    <span class="pull-right"><b>15</b> <small>TICKETS</small></span>
+                                <span class="pull-right"><b>{{ $yesterday_task}}</b> <small>TASKS</small></span>
                                 </li>
-                                <li>
-                                    LAST WEEK
-                                    <span class="pull-right"><b>90</b> <small>TICKETS</small></span>
-                                </li>
+                                
                                 <li>
                                     LAST MONTH
-                                    <span class="pull-right"><b>342</b> <small>TICKETS</small></span>
+                                    <span class="pull-right"><b>{{$month_task}}</b> <small>TASKS</small></span>
                                 </li>
                                 <li>
                                     LAST YEAR
-                                    <span class="pull-right"><b>4 225</b> <small>TICKETS</small></span>
+                                <span class="pull-right"><b>{{$year_task}}</b> <small>TASKS</small></span>
                                 </li>
                                 <li>
-                                    ALL
-                                    <span class="pull-right"><b>8 752</b> <small>TICKETS</small></span>
+                                    PENDING TASK
+                                <span class="pull-right"><b>{{$total_task}}</b> <small>TASKS</small></span>
+                                </li>
+                                <li>
+                                    ALL TASK
+                                <span class="pull-right"><b>{{$total_task2}}</b> <small>TASKS</small></span>
                                 </li>
                             </ul>
                         </div>
@@ -362,8 +363,9 @@
                                             <i class="material-icons">playlist_add_check</i>
                                         </div>
                                         <div class="content">
-                                            <div class="text">NEW TASKS</div>
-                                            <div class="number count-to" data-from="0" data-to="125" data-speed="15" data-fresh-interval="20"></div>
+                                            <div class="text">RECENT TASKS</div>
+                                            <div class="number count-to" data-from="0" data-to="125" data-speed="15" data-fresh-interval="20">
+                                                {{$total_task}}</div>
                                         </div>
                                     </div>
                                 </div>
@@ -376,7 +378,9 @@
                                         </div>
                                         <div class="content">
                                             <div class="text">COMPLAINTS</div>
-                                            <div class="number count-to" data-from="0" data-to="257" data-speed="1000" data-fresh-interval="20"></div>
+                                            <div class="number count-to" data-from="0" data-to="257" data-speed="1000" data-fresh-interval="20">
+                                           
+                                                {{$no_comp}}</div>
                                         </div>
                                     </div>
                                 </div>
@@ -389,7 +393,9 @@
                                         </div>
                                         <div class="content">
                                             <div class="text">UPCOMING EVENTS</div>
-                                            <div class="number count-to" data-from="0" data-to="243" data-speed="1000" data-fresh-interval="20"></div>
+                                            <div class="number count-to" data-from="0" data-to="243" data-speed="1000" data-fresh-interval="20">
+                                                {{$no_event}}
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
